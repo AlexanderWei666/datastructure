@@ -26,7 +26,7 @@ public class MyLinkedList<T> {
      * 2.将first指向新节点
      * 时间复杂度：O(1)
      *
-     * @param data
+     * @param data insert data
      */
     public void insertFirst(T data) {
         Node<T> newNode = new Node<>(data);
@@ -51,9 +51,8 @@ public class MyLinkedList<T> {
      * 2.将first引用指向第二个结点
      * 3.将first引用的prev置空
      * 时间复杂度为：O(1)
-     * @return
      */
-    public boolean deleteFirst() throws Exception {
+    public void deleteFirst() throws Exception {
         if(isEmpty()){
             throw new Exception("删除头结点：链表为空");
         }
@@ -70,7 +69,6 @@ public class MyLinkedList<T> {
             first.prev = null;
         }
         size--;
-        return true;
     }
 
     /**
@@ -78,7 +76,7 @@ public class MyLinkedList<T> {
      * 步骤：从头结点进行遍历，取第i个结点
      * 时间复杂度：O(n)，此操作对于利用数组实现的顺序存储结构，仅需常数阶O(1)即可完成。
      *
-     * @param index
+     * @param index list index start from 0
      * @return
      */
     public T get(int index) throws Exception {
@@ -117,7 +115,7 @@ public class MyLinkedList<T> {
     /**
      * index是否合法
      *
-     * @param index
+     * @param index index legal check
      * @return
      */
     private boolean checkIndex(int index) {
@@ -127,7 +125,7 @@ public class MyLinkedList<T> {
     /**
      * 链表大小
      *
-     * @return
+     * @return list.size
      */
     public int size() {
         return size;
@@ -137,7 +135,7 @@ public class MyLinkedList<T> {
      * 双端链表，从尾部进行插入
      * 步骤：将当前尾结点的next链指向新节点即可
      * 时间复杂度：O(1)
-     * @param data
+     * @param data insert data
      */
     public void insertLast(T data){
         Node<T> newNode = new Node<>(data);
@@ -159,7 +157,6 @@ public class MyLinkedList<T> {
      * 删除尾结点
      * 主要步骤：1.将rear指向倒数第二个结点 2.处理相关结点的引用链
      * 时间复杂度：O(1)
-     * @return
      */
     public void deleteLast() throws Exception {
         if(isEmpty()){
