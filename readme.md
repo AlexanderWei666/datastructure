@@ -57,22 +57,7 @@
 
 ### 代码实现
 单链表
-见`MyLinkedList.java`
 双端链表
 双向链表
-
-
-
----
-陈越，何大的数据结构
-
-**递归函数的执行过程**
-![]("https://github.com/AlexanderWei666/datastructure/raw/master/picture/递归函数.png")
-**什么是好的算法**
-最坏情况复杂度 **T~worst~(n)**
-平均复杂度 **T~avg~(n)**
-**输入规模表** 
-![]("https://github.com/AlexanderWei666/datastructure/raw/master/picture/输入规模.png")
-![]("https://github.com/AlexanderWei666/datastructure/raw/master/picture/输入规模2.png")
-**复杂度分析小窍门**
-![]("https://github.com/AlexanderWei666/datastructure/raw/master/picture/复杂度分析小窍门.png")
+见`MyLinkedList.java`
+**注意：**在过程中需要同时保持对结点的前驱结点和后继结点的引用，删除操作时，需要注意解除废弃结点的各种引用，便于GC。
