@@ -74,7 +74,6 @@ public class MergeSort {
         mergeSort(testComparators, Comparator.comparing(TestComparator::getName));
         System.out.println(Arrays.toString(testComparators));
 
-
     }
 
     private static <T> void mergeSort(T[] arr, Comparator<? super T> c) {
