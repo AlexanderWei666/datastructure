@@ -19,9 +19,9 @@ public class ShellSort {
     /**
      * 交换数组元素
      *
-     * @param arr
-     * @param a
-     * @param b
+     * @param arr 待排序数组
+     * @param a 待交换元素
+     * @param b 待交换元素
      */
     public static <T> void swap(T[] arr, int a, int b) {
         T temp = arr[a];
@@ -30,10 +30,10 @@ public class ShellSort {
     }
 
     /**
-     * @param arr
-     * @param c
+     * @param arr 待排序数组
+     * @param c 外部比较器
      * @param useSwap 选择使用交换还是移动
-     * @param <T>
+     * @param <T> 数组类型
      */
     public static <T> void sort(T[] arr, Comparator<? extends T> c, int useSwap) {
         if (useSwap > 0) {
@@ -41,6 +41,7 @@ public class ShellSort {
         } else shellSort1(arr, c);
     }
 
+    @SuppressWarnings({"rawtypes", "unchecked"})
     public static <T> void shellSort(T[] arr, Comparator c) {
         for (int gap = arr.length >>> 1; gap > 0; gap = gap >>> 1) {
             for (int i = gap; i < arr.length; i++) {
@@ -53,6 +54,7 @@ public class ShellSort {
         }
     }
 
+    @SuppressWarnings({"rawtypes", "unchecked"})
     public static <T> void shellSort1(T[] arr, Comparator c) {
         for (int gap = arr.length >>> 1; gap > 0; gap = gap >>> 1) {
             for (int i = gap; i < arr.length; i++) {
