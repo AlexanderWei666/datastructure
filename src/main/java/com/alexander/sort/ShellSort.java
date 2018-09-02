@@ -23,7 +23,7 @@ public class ShellSort {
      * @param a 待交换元素
      * @param b 待交换元素
      */
-    public static <T> void swap(T[] arr, int a, int b) {
+    private static <T> void swap(T[] arr, int a, int b) {
         T temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
@@ -42,7 +42,7 @@ public class ShellSort {
     }
 
     @SuppressWarnings({"rawtypes", "unchecked"})
-    public static <T> void shellSort(T[] arr, Comparator c) {
+    private static <T> void shellSort(T[] arr, Comparator c) {
         for (int gap = arr.length >>> 1; gap > 0; gap = gap >>> 1) {
             for (int i = gap; i < arr.length; i++) {
                 int j = i;
@@ -55,7 +55,7 @@ public class ShellSort {
     }
 
     @SuppressWarnings({"rawtypes", "unchecked"})
-    public static <T> void shellSort1(T[] arr, Comparator c) {
+    private static <T> void shellSort1(T[] arr, Comparator c) {
         for (int gap = arr.length >>> 1; gap > 0; gap = gap >>> 1) {
             for (int i = gap; i < arr.length; i++) {
                 int j = i;
